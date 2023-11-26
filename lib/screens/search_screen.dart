@@ -90,7 +90,7 @@ class _SearchScreenState extends State<SearchScreen> {
         itemCount: filteredItemNames.length,
         itemBuilder: (context, index) {
           String itemName = filteredItemNames[index];
-          int originalIndex = itemNames.indexOf(itemName); // Get the original index
+          int originalIndex = itemNames.indexOf(itemName); 
 
           return Card(
             color: Color.fromARGB(255, 255, 204, 242),
@@ -98,15 +98,15 @@ class _SearchScreenState extends State<SearchScreen> {
               padding: const EdgeInsets.all(10.0),
               child: Row(
                 children: [
-                  // Image on the left
+                  // gambabr di simpan disebelah kiri
                   Image.network(
                     imageUrls[originalIndex],
                     width: 150.0,
                     height: 150.0,
                     fit: BoxFit.cover,
                   ),
-                  SizedBox(width: 8.0), // Add spacing between image and text
-                  // Text on the right
+                  SizedBox(width: 8.0), // menambahkan spasi di samping gambar dan teks
+                  // Teks di simpan disebelah kanan
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

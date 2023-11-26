@@ -61,15 +61,15 @@ class _MainScreenState extends State<MainScreen> {
   Widget _buildBody() {
     switch (_page) {
       case 0:
-        return HomeScreen(); // Home - Display GridScreen
+        return HomeScreen(); 
       case 1:
-        return SearchScreen();
+        return SearchScreen(); 
       case 2:
         return ComingSoon();
       case 3:
         return GenreScreen();
       case 4:
-        return ProfileScreen(); // Personal - Display ListScreen
+        return ProfileScreen(); 
       default:
         return Container(color: const Color.fromARGB(255, 68, 71, 255));
     }

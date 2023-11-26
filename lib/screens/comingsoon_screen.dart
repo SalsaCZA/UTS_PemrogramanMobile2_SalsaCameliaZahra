@@ -8,33 +8,25 @@ class ComingSoon extends StatefulWidget {
 }
 
 class _ComingSoonState extends State<ComingSoon> {
-  // List of image URLs
+  // List gambar dari URL
   final List<String> imageUrls = [
-    'https://media.21cineplex.com/webcontent/gallery/pictures/170012554599976_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/170011877651368_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/169814053012710_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/170013030531421_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/170013399484507_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/169995102266798_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/169900503369766_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/169900459420267_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/168680244248994_405x594.jpg',
-    'https://media.21cineplex.com/webcontent/gallery/pictures/169417594837304_405x594.jpg'
-    // ... (your list of image URLs)
+    'https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/5bd1c4bd-black-adam.-sumber-imdb-1.jpg',
+    'https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/d40eb205-ambulance.-sumber-imdb-1.jpg',
+    'https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/3187b9c4-top-gun-maverick.-sumber-imdb-1.jpg',
+    'https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/2c7a98ae-everything-everywhere-all-at-once.-sumber-imdb-1.jpg',
+    'https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/2875b0f5-uncharted.-sumber-imdb-1.jpg',
+    'https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/a04b7fda-black-widow.-sumber-imdb-1.jpg'
+    
   ];
 
-  // List of custom names for each item
+  // List Nama pada gambar
   final List<String> itemNames = [
-    'THE DIVE',
-    'THE ANIMAL KINGDOM',
-    'THE TREE MUSKETEERS',
-    'WONKA',
-    'WONKA (IMAX 2D)',
-    'ALL FUN AND GAMES',
-    'NAPOLEON',
-    'THANKSGIVING',
-    'THE FRIENDSHIP GAME',
-    'ONE TRUE LOVES',
+    'TBLACK ADAM',
+    'AMBULANCE',
+    'ALL QUIET ON THE WESTERN FONT',
+    'EVERYTHING EVERYWHERE ALL AT ONCE',
+    'UNCHARTED',
+    'BLACK WIDOW'
   ];
 
   @override
@@ -59,13 +51,13 @@ class _ComingSoonState extends State<ComingSoon> {
           Expanded(
             child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, // Adjust the number of columns as needed
+                crossAxisCount: 2, 
                 crossAxisSpacing: 8.0,
                 mainAxisSpacing: 8.0,
               ),
-              itemCount: 10, // Adjust the number of items in the GridView
+              itemCount: 6, // nomber pada item grid 
               itemBuilder: (context, index) {
-                // Use modulo to repeat images and names if there are fewer URLs and names than items
+               
                 String imageUrl = imageUrls[index % imageUrls.length];
                 String itemName = itemNames[index % itemNames.length];
 
@@ -73,7 +65,7 @@ class _ComingSoonState extends State<ComingSoon> {
                   color: Color.fromARGB(255, 255, 204, 242),
                   child: Padding(
                     padding: const EdgeInsets.all(
-                        10.0), // Adjust the padding as needed
+                        10.0), // pading yang dibutuhkan 
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -83,14 +75,14 @@ class _ComingSoonState extends State<ComingSoon> {
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.network(
                               imageUrl,
-                              width: 120.0, // Adjust the width as needed
-                              height: 120.0, // Adjust the height as needed
+                              width: 120.0, // lebar yang dibutuhkan
+                              height: 120.0, // tinggi yang dibutuhkan
                               fit: BoxFit.cover,
                             ),
                           ),
                         ),
                         SizedBox(height: 8.0),
-                        Text(itemName), // Display custom name for each item
+                        Text(itemName),
                       ],
                     ),
                   ),
