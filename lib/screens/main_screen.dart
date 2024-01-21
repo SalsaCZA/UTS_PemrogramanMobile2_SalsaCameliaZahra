@@ -5,7 +5,7 @@ import 'package:uts_menu_bar_salsacamelia/screens/comingsoon_screen.dart';
 import 'package:uts_menu_bar_salsacamelia/screens/home_screen.dart';
 import 'package:uts_menu_bar_salsacamelia/screens/genre_screen.dart';
 import 'package:uts_menu_bar_salsacamelia/screens/profile_screen.dart';
-import 'package:uts_menu_bar_salsacamelia/screens/search_screen.dart';
+import 'package:uts_menu_bar_salsacamelia/screens/tambah_film.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -32,8 +32,8 @@ class _MainScreenState extends State<MainScreen> {
         label: 'Home',
       ),
       CurvedNavigationBarItem(
-        child: Icon(Icons.search),
-        label: 'Search',
+        child: Icon(Icons.add),
+        label: 'Add Film',
       ),
       CurvedNavigationBarItem(
         child: Icon(Icons.chat_bubble_outline),
@@ -63,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
       case 0:
         return HomeScreen(); 
       case 1:
-        return SearchScreen(); 
+        return TambahFilm(); 
       case 2:
         return ComingSoon();
       case 3:
