@@ -37,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       CurvedNavigationBarItem(
         child: Icon(Icons.chat_bubble_outline),
-        label: 'CoomingSoon',
+        label: 'ComingSoon',
       ),
       CurvedNavigationBarItem(
         child: Icon(Icons.newspaper),
@@ -65,7 +65,7 @@ class _MainScreenState extends State<MainScreen> {
       case 1:
         return TambahFilm(); 
       case 2:
-        return ComingSoon();
+        return Comingsoon();
       case 3:
         return GenreScreen();
       case 4:

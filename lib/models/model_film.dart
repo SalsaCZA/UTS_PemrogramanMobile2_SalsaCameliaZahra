@@ -3,8 +3,8 @@ import 'package:intl/intl.dart';
 class ModelFilm {
   final int id;
   final String namaFilm;
-  final String deskripsiFilm;
-  final DateTime datetime;
+  late String deskripsiFilm;
+  late DateTime datetime;
 
   ModelFilm({
     required this.id,
@@ -14,21 +14,27 @@ class ModelFilm {
   });
 
   factory ModelFilm.fromJson(Map<String, dynamic> json) {
-    DateTime parsedDatetime;
-
-    try {
-      parsedDatetime = DateFormat("yyyy-MM-dd HH:mm:ss").parse(json['datetime']);
-    } catch (e) {
-      // Jika parsing gagal, gunakan waktu saat ini dan catat pesan kesalahan
-      print("Error parsing datetime: $e");
-      parsedDatetime = DateTime.now();
-    }
-
     return ModelFilm(
       id: json['id'] as int,
       namaFilm: json['nama_film'] as String,
       deskripsiFilm: json['deskripsi_film'] as String,
-      datetime: parsedDatetime,
+      datetime: DateTime.parse(json['datetime'] as String),
     );
+  }
+
+  // Method to convert the object to a Map
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'nama_film': namaFilm,
+      'deskripsi_film': deskripsiFilm,
+      'datetime': DateFormat("yyyy-MM-dd HH:mm:ss").format(datetime),
+    };
+  }
+
+  // Method to update object properties from a Map
+  void updateFromMap(Map<String, dynamic> map) {
+    deskripsiFilm = map['deskripsi_film'] as String;
+    datetime = DateTime.parse(map['datetime'] as String);
   }
 }

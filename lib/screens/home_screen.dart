@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // List Nama pada gambar
   final List<String> itemNames = [
-    'TBLACK ADAM',
+    'BLACK ADAM',
     'AMBULANCE',
     'ALL QUIET ON THE WESTERN FONT',
     'EVERYTHING EVERYWHERE ALL AT ONCE',
